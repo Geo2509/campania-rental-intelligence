@@ -1,0 +1,319 @@
+POST #1
+🏡 Rental opportunity detected in Ischia
+
+Our Campania Rental Intelligence Agent found a potentially interesting rental offer for the local short-term rental market.
+
+📌 Property signal:
+Case vacanze e ville con piscina a Ischia
+
+📍 Area:
+Ischia
+
+⭐ Intelligence score:
+59/100
+
+🏷 Category:
+beach, seasonal
+
+🔎 Why this offer was selected:
+mare, terrazza, piscina, appartamento, ischia
+
+🌍 Source:
+www.casevacanza.it
+
+🔗 More details:
+https://www.casevacanza.it/casa-vacanze-ischia/piscina
+
+This is part of an automated real estate monitoring workflow built with Python, data filtering, scoring logic, and content generation.
+
+#Campania #RealEstate #RentalIntelligence #Python #Automation #OSINT #PropertyTech
+
+------------------------------------------------------------
+
+POST #4
+🏡 Rental opportunity detected in Procida
+
+Our Campania Rental Intelligence Agent found a potentially interesting rental offer for the local short-term rental market.
+
+📌 Property signal:
+Le 10 migliori case vacanze di Monte di Procida, Italia
+
+📍 Area:
+Procida
+
+⭐ Intelligence score:
+45/100
+
+🏷 Category:
+beach, seasonal
+
+🔎 Why this offer was selected:
+spiaggia, procida, bacoli, monte di procida
+
+🌍 Source:
+www.booking.com
+
+🔗 More details:
+https://www.booking.com/holiday-homes/city/it/monte-di-procida.it.html
+
+This is part of an automated real estate monitoring workflow built with Python, data filtering, scoring logic, and content generation.
+
+#Campania #RealEstate #RentalIntelligence #Python #Automation #OSINT #PropertyTech
+
+------------------------------------------------------------
+
+POST #7
+🏡 Rental opportunity detected in Capri
+
+Our Campania Rental Intelligence Agent found a potentially interesting rental offer for the local short-term rental market.
+
+📌 Property signal:
+Le migliori ville – Isola di Capri, Italia
+
+📍 Area:
+Capri
+
+⭐ Intelligence score:
+42/100
+
+🏷 Category:
+luxury, seasonal
+
+🔎 Why this offer was selected:
+villa, casa vacanza, capri
+
+🌍 Source:
+www.booking.com
+
+🔗 More details:
+https://www.booking.com/villas/region/it/capri.it.html
+
+This is part of an automated real estate monitoring workflow built with Python, data filtering, scoring logic, and content generation.
+
+#Campania #RealEstate #RentalIntelligence #Python #Automation #OSINT #PropertyTech
+
+------------------------------------------------------------
+
+POST #10
+🏡 Rental opportunity detected in Procida
+
+Our Campania Rental Intelligence Agent found a potentially interesting rental offer for the local short-term rental market.
+
+📌 Property signal:
+Le 10 migliori case vacanze di Procida, Italia
+
+📍 Area:
+Procida
+
+⭐ Intelligence score:
+35/100
+
+🏷 Category:
+beach, seasonal
+
+🔎 Why this offer was selected:
+spiaggia, terrazza, procida
+
+🌍 Source:
+www.booking.com
+
+🔗 More details:
+https://www.booking.com/holiday-homes/city/it/procida.it.html
+
+This is part of an automated real estate monitoring workflow built with Python, data filtering, scoring logic, and content generation.
+
+#Campania #RealEstate #RentalIntelligence #Python #Automation #OSINT #PropertyTech
+
+------------------------------------------------------------
+
+POST #13
+🏡 Rental opportunity detected in Procida
+
+Our Campania Rental Intelligence Agent found a potentially interesting rental offer for the local short-term rental market.
+
+📌 Property signal:
+Case e appartamenti vacanze a Monte di Procida in affitto
+
+📍 Area:
+Procida
+
+⭐ Intelligence score:
+35/100
+
+🏷 Category:
+seasonal
+
+🔎 Why this offer was selected:
+casa vacanza, procida, monte di procida
+
+🌍 Source:
+www.casevacanza.it
+
+🔗 More details:
+https://www.casevacanza.it/casa-vacanze-monte-di-procida
+
+This is part of an automated real estate monitoring workflow built with Python, data filtering, scoring logic, and content generation.
+
+#Campania #RealEstate #RentalIntelligence #Python #Automation #OSINT #PropertyTech
+
+------------------------------------------------------------
+
+POST #16
+🏡 Rental opportunity detected in Capri
+
+Our Campania Rental Intelligence Agent found a potentially interesting rental offer for the local short-term rental market.
+
+📌 Property signal:
+Capri: soggiorni in ville vacanze
+
+📍 Area:
+Capri
+
+⭐ Intelligence score:
+30/100
+
+🏷 Category:
+luxury
+
+🔎 Why this offer was selected:
+villa, capri
+
+🌍 Source:
+www.airbnb.it
+
+🔗 More details:
+https://www.airbnb.it/capri-italy/stays/villas
+
+This is part of an automated real estate monitoring workflow built with Python, data filtering, scoring logic, and content generation.
+
+#Campania #RealEstate #RentalIntelligence #Python #Automation #OSINT #PropertyTech
+
+------------------------------------------------------------
+
+POST #19
+🏡 Rental opportunity detected in Ischia
+
+Our Campania Rental Intelligence Agent found a potentially interesting rental offer for the local short-term rental market.
+
+📌 Property signal:
+Ischia: case vacanze con accesso alla spiaggia
+
+📍 Area:
+Ischia
+
+⭐ Intelligence score:
+26/100
+
+🏷 Category:
+beach
+
+🔎 Why this offer was selected:
+spiaggia, ischia
+
+🌍 Source:
+www.airbnb.it
+
+🔗 More details:
+https://www.airbnb.it/ischia-italy/stays/beach-access
+
+This is part of an automated real estate monitoring workflow built with Python, data filtering, scoring logic, and content generation.
+
+#Campania #RealEstate #RentalIntelligence #Python #Automation #OSINT #PropertyTech
+
+------------------------------------------------------------
+
+POST #22
+🏡 Rental opportunity detected in Ischia
+
+Our Campania Rental Intelligence Agent found a potentially interesting rental offer for the local short-term rental market.
+
+📌 Property signal:
+Case e appartamenti vacanze a Ischia in affitto
+
+📍 Area:
+Ischia
+
+⭐ Intelligence score:
+26/100
+
+🏷 Category:
+seasonal
+
+🔎 Why this offer was selected:
+casa vacanza, ischia
+
+🌍 Source:
+www.casevacanza.it
+
+🔗 More details:
+https://www.casevacanza.it/casa-vacanze-ischia
+
+This is part of an automated real estate monitoring workflow built with Python, data filtering, scoring logic, and content generation.
+
+#Campania #RealEstate #RentalIntelligence #Python #Automation #OSINT #PropertyTech
+
+------------------------------------------------------------
+
+POST #25
+🏡 Rental opportunity detected in Bacoli
+
+Our Campania Rental Intelligence Agent found a potentially interesting rental offer for the local short-term rental market.
+
+📌 Property signal:
+Le 10 migliori case vacanze di Bacoli, Italia
+
+📍 Area:
+Bacoli
+
+⭐ Intelligence score:
+25/100
+
+🏷 Category:
+luxury, seasonal
+
+🔎 Why this offer was selected:
+villa, bacoli
+
+🌍 Source:
+www.booking.com
+
+🔗 More details:
+https://www.booking.com/holiday-homes/city/it/bacoli.it.html
+
+This is part of an automated real estate monitoring workflow built with Python, data filtering, scoring logic, and content generation.
+
+#Campania #RealEstate #RentalIntelligence #Python #Automation #OSINT #PropertyTech
+
+------------------------------------------------------------
+
+POST #28
+🏡 Rental opportunity detected in Procida
+
+Our Campania Rental Intelligence Agent found a potentially interesting rental offer for the local short-term rental market.
+
+📌 Property signal:
+Migliori case vacanza sulla spiaggia a Procida, Campania
+
+📍 Area:
+Procida
+
+⭐ Intelligence score:
+25/100
+
+🏷 Category:
+beach, seasonal
+
+🔎 Why this offer was selected:
+spiaggia, procida
+
+🌍 Source:
+www.vrbo.com
+
+🔗 More details:
+https://www.vrbo.com/it-it/case-vacanze/spiaggia/italia/campania/citt%C3%A0-metropolitana-di-napoli/procida
+
+This is part of an automated real estate monitoring workflow built with Python, data filtering, scoring logic, and content generation.
+
+#Campania #RealEstate #RentalIntelligence #Python #Automation #OSINT #PropertyTech
+
+------------------------------------------------------------

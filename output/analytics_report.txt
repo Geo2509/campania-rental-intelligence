@@ -1,0 +1,91 @@
+Campania Rental Intelligence Report
+========================================
+
+Total offers found: 35
+Average intelligence score: 20.9/100
+
+Top source domains:
+- www.casevacanza.it: 8
+- www.airbnb.it: 7
+- www.booking.com: 6
+- www.subito.it: 5
+- www.vrbo.com: 4
+
+Top categories:
+- seasonal: 14
+- general: 12
+- beach, seasonal: 4
+- luxury, seasonal: 3
+- luxury: 1
+
+Top 10 offers:
+
+Title: Case vacanze e ville con piscina a Ischia
+Domain: www.casevacanza.it
+Score: 59/100
+Category: beach, seasonal
+Reasons: mare, terrazza, piscina, appartamento, ischia
+Link: https://www.casevacanza.it/casa-vacanze-ischia/piscina
+
+Title: Le 10 migliori case vacanze di Monte di Procida, Italia
+Domain: www.booking.com
+Score: 45/100
+Category: beach, seasonal
+Reasons: spiaggia, procida, bacoli, monte di procida
+Link: https://www.booking.com/holiday-homes/city/it/monte-di-procida.it.html
+
+Title: Le migliori ville – Isola di Capri, Italia
+Domain: www.booking.com
+Score: 42/100
+Category: luxury, seasonal
+Reasons: villa, casa vacanza, capri
+Link: https://www.booking.com/villas/region/it/capri.it.html
+
+Title: Le 10 migliori case vacanze di Procida, Italia
+Domain: www.booking.com
+Score: 35/100
+Category: beach, seasonal
+Reasons: spiaggia, terrazza, procida
+Link: https://www.booking.com/holiday-homes/city/it/procida.it.html
+
+Title: Case e appartamenti vacanze a Monte di Procida in affitto
+Domain: www.casevacanza.it
+Score: 35/100
+Category: seasonal
+Reasons: casa vacanza, procida, monte di procida
+Link: https://www.casevacanza.it/casa-vacanze-monte-di-procida
+
+Title: Capri: soggiorni in ville vacanze
+Domain: www.airbnb.it
+Score: 30/100
+Category: luxury
+Reasons: villa, capri
+Link: https://www.airbnb.it/capri-italy/stays/villas
+
+Title: Ischia: case vacanze con accesso alla spiaggia
+Domain: www.airbnb.it
+Score: 26/100
+Category: beach
+Reasons: spiaggia, ischia
+Link: https://www.airbnb.it/ischia-italy/stays/beach-access
+
+Title: Case e appartamenti vacanze a Ischia in affitto
+Domain: www.casevacanza.it
+Score: 26/100
+Category: seasonal
+Reasons: casa vacanza, ischia
+Link: https://www.casevacanza.it/casa-vacanze-ischia
+
+Title: Le 10 migliori case vacanze di Bacoli, Italia
+Domain: www.booking.com
+Score: 25/100
+Category: luxury, seasonal
+Reasons: villa, bacoli
+Link: https://www.booking.com/holiday-homes/city/it/bacoli.it.html
+
+Title: Migliori case vacanza sulla spiaggia a Procida, Campania
+Domain: www.vrbo.com
+Score: 25/100
+Category: beach, seasonal
+Reasons: spiaggia, procida
+Link: https://www.vrbo.com/it-it/case-vacanze/spiaggia/italia/campania/citt%C3%A0-metropolitana-di-napoli/procida
