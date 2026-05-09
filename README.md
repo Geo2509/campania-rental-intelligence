@@ -201,3 +201,9 @@ Python Automation | Rental Intelligence | Data Processing
 ## Terminal Workflow
 
 ![Terminal](screenshots/terminal_run.png)
+
+---
+
+## Streamlit Dashboard
+
+![Streamlit Dashboard](screenshots/streamlit_dashboard.png)
