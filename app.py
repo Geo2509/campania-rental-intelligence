@@ -6,7 +6,6 @@ from config import SCORED_DEALS_FILE
 
 st.set_page_config(
     page_title="Campania Rental Intelligence",
-    page_icon="🏡",
     layout="wide"
 )
 
@@ -14,18 +13,39 @@ st.set_page_config(
 def detect_location(text):
     text = str(text).lower()
 
-    if "capri" in text:
-        return "Capri"
-    if "ischia" in text:
-        return "Ischia"
-    if "monte di procida" in text:
-        return "Monte di Procida"
-    if "procida" in text:
-        return "Procida"
-    if "bacoli" in text:
-        return "Bacoli"
+    locations = {
+        "capri": "Capri",
+        "ischia": "Ischia",
+        "procida": "Procida",
+        "bacoli": "Bacoli",
+        "monte di procida": "Monte di Procida",
+    }
+
+    for key, value in locations.items():
+        if key in text:
+            return value
 
     return "Other"
+
+
+def create_rule_based_summary(row):
+    location = row.get("location", "Campania")
+    category = row.get("deal_category", "general")
+    score = row.get("intelligence_score", 0)
+    reasons = row.get("score_reasons", "")
+
+    if score >= 70:
+        strength = "high-priority"
+    elif score >= 40:
+        strength = "medium-priority"
+    else:
+        strength = "low-priority"
+
+    return (
+        f"{strength.capitalize()} rental signal in {location}. "
+        f"Category: {category}. "
+        f"Main indicators: {reasons}."
+    )
 
 
 @st.cache_data
@@ -39,22 +59,34 @@ def load_data():
         axis=1
     )
 
+    df["summary"] = df.apply(create_rule_based_summary, axis=1)
+
     return df
 
 
 df = load_data()
 
-st.title("🏡 Campania Rental Intelligence Dashboard")
-st.caption("AI-powered rental monitoring and property intelligence platform for Campania, Italy")
+st.markdown("""
+# 🏡 Campania Rental Intelligence
+### AI-powered rental monitoring dashboard for Campania, Italy
+""")
 
-# Sidebar filters
+
 st.sidebar.header("Filters")
 
-locations = ["All"] + sorted(df["location"].unique().tolist())
-selected_location = st.sidebar.selectbox("Location", locations)
+locations = sorted(df["location"].dropna().unique())
+selected_locations = st.sidebar.multiselect(
+    "Location",
+    locations,
+    default=locations
+)
 
-categories = ["All"] + sorted(df["deal_category"].unique().tolist())
-selected_category = st.sidebar.selectbox("Category", categories)
+categories = sorted(df["deal_category"].dropna().unique())
+selected_categories = st.sidebar.multiselect(
+    "Category",
+    categories,
+    default=categories
+)
 
 min_score = st.sidebar.slider(
     "Minimum intelligence score",
@@ -63,92 +95,133 @@ min_score = st.sidebar.slider(
     value=0
 )
 
-filtered_df = df.copy()
+domains = sorted(df["domain"].dropna().unique())
+selected_domains = st.sidebar.multiselect(
+    "Source domain",
+    domains,
+    default=domains
+)
 
-if selected_location != "All":
-    filtered_df = filtered_df[filtered_df["location"] == selected_location]
+filtered_df = df[
+    (df["location"].isin(selected_locations)) &
+    (df["deal_category"].isin(selected_categories)) &
+    (df["intelligence_score"] >= min_score) &
+    (df["domain"].isin(selected_domains))
+]
 
-if selected_category != "All":
-    filtered_df = filtered_df[filtered_df["deal_category"] == selected_category]
-
-filtered_df = filtered_df[filtered_df["intelligence_score"] >= min_score]
-
-filtered_df = filtered_df.sort_values(
+top_df = filtered_df.sort_values(
     by="intelligence_score",
     ascending=False
 )
 
-# KPI section
 total_offers = len(filtered_df)
-average_score = round(filtered_df["intelligence_score"].mean(), 1) if total_offers > 0 else 0
-top_location = filtered_df["location"].value_counts().idxmax() if total_offers > 0 else "N/A"
-top_category = filtered_df["deal_category"].value_counts().idxmax() if total_offers > 0 else "N/A"
+
+if total_offers > 0:
+    average_score = round(filtered_df["intelligence_score"].mean(), 1)
+    max_score = int(filtered_df["intelligence_score"].max())
+    top_location = filtered_df["location"].value_counts().idxmax()
+else:
+    average_score = 0
+    max_score = 0
+    top_location = "N/A"
+
 
 col1, col2, col3, col4 = st.columns(4)
 
-col1.metric("Total Offers", total_offers)
-col2.metric("Average Score", average_score)
-col3.metric("Top Location", top_location)
-col4.metric("Top Category", top_category)
+with col1:
+    st.metric("Total Offers", total_offers)
 
-st.divider()
+with col2:
+    st.metric("Average Score", average_score)
 
-# Main table
-st.subheader("📌 Top Rental Offers")
+with col3:
+    st.metric("Max Score", max_score)
 
-st.dataframe(
-    filtered_df[
-        [
-            "title",
-            "location",
-            "domain",
-            "intelligence_score",
-            "deal_category",
-            "score_reasons",
-            "link",
-        ]
-    ],
-    width="stretch",
-    hide_index=True
+with col4:
+    st.metric("Top Location", top_location)
+
+
+tab1, tab2, tab3, tab4 = st.tabs(
+    ["📊 Overview", "🏡 Offers", "⭐ Top Signals", "🧠 Summaries"]
 )
 
-st.divider()
 
-# Charts
-chart_col1, chart_col2 = st.columns(2)
+with tab1:
+    st.subheader("Category Distribution")
 
-with chart_col1:
-    st.subheader("📍 Offers by Location")
-    location_counts = filtered_df["location"].value_counts()
-    st.bar_chart(location_counts)
+    if not filtered_df.empty:
+        st.bar_chart(filtered_df["deal_category"].value_counts())
+    else:
+        st.warning("No offers match the selected filters.")
 
-with chart_col2:
-    st.subheader("🏷 Offers by Category")
-    category_counts = filtered_df["deal_category"].value_counts()
-    st.bar_chart(category_counts)
+    st.subheader("Location Distribution")
 
-st.divider()
+    if not filtered_df.empty:
+        st.bar_chart(filtered_df["location"].value_counts())
 
-st.subheader("🌍 Top Source Domains")
-domain_counts = filtered_df["domain"].value_counts().head(10)
-st.bar_chart(domain_counts)
+    st.subheader("Top Source Domains")
 
-st.divider()
+    if not filtered_df.empty:
+        st.bar_chart(filtered_df["domain"].value_counts())
 
-# Cards
-st.subheader("⭐ Top 5 High-Scoring Offers")
 
-top_5 = filtered_df.head(5)
+with tab2:
+    st.subheader("Filtered Rental Offers")
 
-for _, row in top_5.iterrows():
-    with st.container(border=True):
-        st.markdown(f"### {row['title']}")
-        c1, c2, c3 = st.columns(3)
+    if not top_df.empty:
+        st.dataframe(
+            top_df[
+                [
+                    "title",
+                    "location",
+                    "domain",
+                    "intelligence_score",
+                    "deal_category",
+                    "score_reasons",
+                    "link",
+                ]
+            ],
+            width="stretch"
+        )
+    else:
+        st.warning("No offers available.")
 
-        c1.metric("Score", f"{row['intelligence_score']}/100")
-        c2.write(f"**Location:** {row['location']}")
-        c3.write(f"**Category:** {row['deal_category']}")
 
-        st.write(f"**Source:** {row['domain']}")
-        st.write(f"**Why selected:** {row['score_reasons']}")
-        st.link_button("Open Listing", row["link"])
+with tab3:
+    st.subheader("Top 5 High-Scoring Rental Signals")
+
+    top_5 = top_df.head(5)
+
+    if not top_5.empty:
+        for _, row in top_5.iterrows():
+            st.markdown(f"""
+### {row['title']}
+
+**Location:** {row['location']}  
+**Score:** {row['intelligence_score']}/100  
+**Category:** {row['deal_category']}  
+**Source:** {row['domain']}  
+**Signals:** {row['score_reasons']}  
+
+[Open Listing]({row['link']})
+""")
+            st.divider()
+    else:
+        st.warning("No top signals available.")
+
+
+with tab4:
+    st.subheader("Rule-Based Intelligence Summaries")
+
+    if not top_df.empty:
+        for _, row in top_df.head(10).iterrows():
+            st.markdown(f"""
+### {row['location']} — Score {row['intelligence_score']}/100
+
+{row['summary']}
+
+[Open Listing]({row['link']})
+""")
+            st.divider()
+    else:
+        st.warning("No summaries available.")
