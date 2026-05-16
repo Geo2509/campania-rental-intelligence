@@ -2,3 +2,5 @@ __pycache__/
 .env
 *.pyc
 .streamlit/secrets.toml
+*.odt
+.~lock*.odt#
