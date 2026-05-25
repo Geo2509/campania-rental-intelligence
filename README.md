@@ -1,5 +1,10 @@
 # Campania Rental Intelligence Platform
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
+![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-purple)
+
 Real estate monitoring and rental intelligence platform focused on tourism and rental market signals in Campania, Italy.
 
 The project uses Python automation, SerpAPI, Pandas, rule-based scoring, classification logic, Plotly dashboards, and dashboard-ready datasets to monitor rental opportunities and tourism-related property signals.
