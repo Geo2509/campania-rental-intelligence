@@ -169,10 +169,6 @@ streamlit run app.py
 
 ![Dashboard](screenshots/streamlit_dashboard.png)
 
-### Terminal Workflow
-
-![Terminal Run](screenshots/terminal_run.png)
-
 ---
 
 ## Business Use Cases
