@@ -1,6 +1,17 @@
+# Python cache
 __pycache__/
-.env
 *.pyc
+
+# Secrets
+.env
 .streamlit/secrets.toml
+
+# Local/editor files
 *.odt
-.~lock*.odt#.streamlit/
+.~lock*.odt#
+.DS_Store
+
+# Runtime-generated data and outputs
+data/*.csv
+output/*.csv
+output/*.txt
